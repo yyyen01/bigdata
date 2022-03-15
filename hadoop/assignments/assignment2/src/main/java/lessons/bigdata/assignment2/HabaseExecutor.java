@@ -16,7 +16,7 @@ public class HabaseExecutor
         Connection conn = ConnectionFactory.createConnection(configuration);
         Admin admin = conn.getAdmin();
 
-        TableName tableName = TableName.valueOf("user_t");
+        TableName tableName = TableName.valueOf("yen:student");
         String colFamily = "User";
         int rowKey = 1;
 
@@ -62,6 +62,6 @@ public class HabaseExecutor
         } else {
             System.out.println("Table does not exist!");
         }
-    }
+    
     }
 }
