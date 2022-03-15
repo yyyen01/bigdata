@@ -12,38 +12,6 @@ public class UsageBean implements WritableComparable<UsageBean> {
     private long downStream;
     private long sumUsage;
 
-    public String getPhoneNum() {
-        return this.phoneNum;
-    }
-
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
-
-    public long getUpStream() {
-        return this.upStream;
-    }
-
-    public void setUpStream(long upStream) {
-        this.upStream = upStream;
-    }
-
-    public long getDownStream() {
-        return this.downStream;
-    }
-
-    public void setDownStream(long downStream) {
-        this.downStream = downStream;
-    }
-
-    public long getSumUsage() {
-        return this.sumUsage;
-    }
-
-    public void setSumUsage(long sumUsage) {
-        this.sumUsage = sumUsage;
-    }
-
     public UsageBean(){}
 
     public UsageBean(String phoneNum,long upStream,long downStream) {
@@ -68,7 +36,6 @@ public class UsageBean implements WritableComparable<UsageBean> {
         output.writeLong(sumUsage);
     }
     
-
     @Override
     public String toString() {
         return ""+upStream+"\t"+downStream+"\t"+sumUsage;
@@ -78,5 +45,37 @@ public class UsageBean implements WritableComparable<UsageBean> {
    public int compareTo(UsageBean o) {
       return sumUsage > o.sumUsage ? -1 : 1;
    }
+
+   public String getPhoneNum() {
+    return this.phoneNum;
+}
+
+public void setPhoneNum(String phoneNum) {
+    this.phoneNum = phoneNum;
+}
+
+public long getUpStream() {
+    return this.upStream;
+}
+
+public void setUpStream(long upStream) {
+    this.upStream = upStream;
+}
+
+public long getDownStream() {
+    return this.downStream;
+}
+
+public void setDownStream(long downStream) {
+    this.downStream = downStream;
+}
+
+public long getSumUsage() {
+    return this.sumUsage;
+}
+
+public void setSumUsage(long sumUsage) {
+    this.sumUsage = sumUsage;
+}
     
 }

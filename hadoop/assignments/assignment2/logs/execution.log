@@ -1,0 +1,95 @@
+2022-03-15 17:55:13 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:host.name=yenyen-XPS-13-9360
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:java.version=1.8.0_312
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:java.vendor=Private Build
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:java.class.path=/tmp/cp_ee96z3jidbgl9e6ttuhw0rl28.jar
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:java.io.tmpdir=/tmp
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:java.compiler=<NA>
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:os.name=Linux
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:os.arch=amd64
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:os.version=5.13.0-35-generic
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:user.name=yenyen
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:user.home=/home/yenyen
+2022-03-15 17:55:13 INFO  ZooKeeper:100 - Client environment:user.dir=/home/yenyen/workspace/java-wp/hadoop/assignments/assignment2
+2022-03-15 17:55:13 INFO  ZooKeeper:438 - Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=90000 watcher=org.apache.hadoop.hbase.zookeeper.ReadOnlyZKClient$$Lambda$13/1838773404@6e62f5ac
+2022-03-15 17:55:13 INFO  ClientCnxn:1032 - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2022-03-15 17:55:13 INFO  ClientCnxn:876 - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+2022-03-15 17:55:13 INFO  ClientCnxn:1299 - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x17f8c9bf73f0031, negotiated timeout = 90000
+2022-03-15 17:55:14 INFO  HabaseExecutor:161 - Current namespace : [{NAME => 'default'}, {NAME => 'hbase'}]
+2022-03-15 17:55:14 INFO  HabaseExecutor:38 - Creating Namespace [yen].
+2022-03-15 17:55:14 INFO  HabaseExecutor:41 - Namespace created successfully!
+2022-03-15 17:55:14 INFO  HabaseExecutor:161 - Current namespace : [{NAME => 'default'}, {NAME => 'hbase'}, {NAME => 'yen'}]
+2022-03-15 17:55:14 INFO  HabaseExecutor:44 - Check if Namespace exists now:true
+2022-03-15 17:55:15 INFO  HBaseAdmin:3679 - Operation: CREATE, Table Name: yen:student, procId: 144 completed
+2022-03-15 17:55:15 INFO  HabaseExecutor:61 - Table create successful
+2022-03-15 17:55:15 INFO  HabaseExecutor:72 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:73 - Insertion
+2022-03-15 17:55:15 INFO  HabaseExecutor:74 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:84 - Data insert success for rowKey:Tom
+2022-03-15 17:55:15 INFO  HabaseExecutor:84 - Data insert success for rowKey:Jerry
+2022-03-15 17:55:15 INFO  HabaseExecutor:84 - Data insert success for rowKey:Jack
+2022-03-15 17:55:15 INFO  HabaseExecutor:84 - Data insert success for rowKey:Rose
+2022-03-15 17:55:15 INFO  HabaseExecutor:84 - Data insert success for rowKey:YenYen
+2022-03-15 17:55:15 INFO  HabaseExecutor:128 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:129 - Scanning Table
+2022-03-15 17:55:15 INFO  HabaseExecutor:130 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:137 - row key :Jack
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.class::2
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.student_id::20210000000003
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.programming::80
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.understanding::80
+2022-03-15 17:55:15 INFO  HabaseExecutor:146 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:137 - row key :Jerry
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.class::1
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.student_id::20210000000002
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.programming::67
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.understanding::85
+2022-03-15 17:55:15 INFO  HabaseExecutor:146 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:137 - row key :Rose
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.class::2
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.student_id::20210000000004
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.programming::61
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.understanding::60
+2022-03-15 17:55:15 INFO  HabaseExecutor:146 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:137 - row key :Tom
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.class::1
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.student_id::20210000000001
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.programming::82
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.understanding::75
+2022-03-15 17:55:15 INFO  HabaseExecutor:146 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:137 - row key :YenYen
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.class::1
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - info.student_id::G20200343150210
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.programming::90
+2022-03-15 17:55:15 INFO  HabaseExecutor:141 - score.understanding::70
+2022-03-15 17:55:15 INFO  HabaseExecutor:146 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:154 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:89 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:90 - Delele Data
+2022-03-15 17:55:15 INFO  HabaseExecutor:91 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:97 - Delete Success for rowkey : Tom
+2022-03-15 17:55:15 INFO  HabaseExecutor:97 - Delete Success for rowkey : Jerry
+2022-03-15 17:55:15 INFO  HabaseExecutor:97 - Delete Success for rowkey : Jack
+2022-03-15 17:55:15 INFO  HabaseExecutor:97 - Delete Success for rowkey : Rose
+2022-03-15 17:55:15 INFO  HabaseExecutor:97 - Delete Success for rowkey : YenYen
+2022-03-15 17:55:15 INFO  HabaseExecutor:128 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:129 - Scanning Table
+2022-03-15 17:55:15 INFO  HabaseExecutor:130 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:150 - No row found!
+2022-03-15 17:55:15 INFO  HabaseExecutor:154 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:102 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HabaseExecutor:103 - Delete Table
+2022-03-15 17:55:15 INFO  HabaseExecutor:104 - -----------------------------------------
+2022-03-15 17:55:15 INFO  HBaseAdmin:924 - Started disable of yen:student
+2022-03-15 17:55:16 INFO  HBaseAdmin:3679 - Operation: DISABLE, Table Name: yen:student, procId: 146 completed
+2022-03-15 17:55:16 INFO  HBaseAdmin:3679 - Operation: DELETE, Table Name: yen:student, procId: 148 completed
+2022-03-15 17:55:16 INFO  HabaseExecutor:109 - Table Delete Successful
+2022-03-15 17:55:16 INFO  HabaseExecutor:113 - -----------------------------------------
+2022-03-15 17:55:16 INFO  HabaseExecutor:115 - Check if table exist:false
+2022-03-15 17:55:16 INFO  HabaseExecutor:118 - -----------------------------------------
+2022-03-15 17:55:16 INFO  HabaseExecutor:120 - Namaspace Deleted successfully.
+2022-03-15 17:55:16 INFO  HabaseExecutor:161 - Current namespace : [{NAME => 'default'}, {NAME => 'hbase'}]
+2022-03-15 17:55:16 INFO  HabaseExecutor:121 - Check if Namaspace Exist:false
