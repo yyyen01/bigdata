@@ -1,6 +1,7 @@
 package lessons.bigdata.assignment2;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.Arrays;
 
 import org.apache.hadoop.conf.Configuration;
@@ -119,6 +120,8 @@ public class HabaseExecutor
         admin.deleteNamespace(MY_NAMESPACE_NAME);
         logger.info("Namaspace Deleted successfully.");
         logger.info("Check if Namaspace Exist:"+namespaceExists(admin,MY_NAMESPACE_NAME));
+
+        conn.close();
 
     
     }
