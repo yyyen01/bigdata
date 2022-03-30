@@ -176,7 +176,7 @@
     Roger & Me (1989)	4.0739348370927315
     Time taken: 10.112 seconds, Fetched: 10 row(s)
 
-#### Combine these 3 steps using one query. However, the result is differenet due to different execution plan by HQL.
+#### 6b. Combine these 3 steps using one query. However, the result is differenet due to different execution plan by HQL.
 
     hive> Select moviename,avg(rate) from yen.t_rating b join yen.t_movie c on b.movieid=c.movieid where b.movieid in (
         > Select a.movieid from yen.t_rating a where a.userid = (Select b1.userid from yen.t_rating a1 join yen.t_user b1 on a1.userid=b1.userid where b1.sex='F' group by b1.userid order by count(a1.movieid) desc limit 1) order by rate desc limit 10
