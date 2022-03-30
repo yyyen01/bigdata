@@ -1,4 +1,4 @@
-# Assignment 4
+# Assignment 3
 ## Requirements
 #### 题目一（简单）
 展示电影 ID 为 2116 这部电影各年龄段的平均影评分。
@@ -175,5 +175,47 @@
     Night on Earth (1991)	3.747422680412371
     Roger & Me (1989)	4.0739348370927315
     Time taken: 10.112 seconds, Fetched: 10 row(s)
+
+#### Combine these 3 steps using one query. However, the result is differenet due to different execution plan by HQL.
+
+    hive> Select moviename,avg(rate) from yen.t_rating b join yen.t_movie c on b.movieid=c.movieid where b.movieid in (
+        > Select a.movieid from yen.t_rating a where a.userid = (Select b1.userid from yen.t_rating a1 join yen.t_user b1 on a1.userid=b1.userid where b1.sex='F' group by b1.userid order by count(a1.movieid) desc limit 1) order by rate desc limit 10
+        > ) group by moviename;
+    Warning: Map Join MAPJOIN[112][bigTable=?] in task 'Map 4' is a cross product
+    Query ID = student5_20220330085841_3a47e859-ef34-4f06-8094-a7b62979f281
+    Total jobs = 1
+    Launching Job 1 out of 1
+    Status: Running (Executing on YARN cluster with App id application_1645699879292_0963)
+
+    ----------------------------------------------------------------------------------------------
+            VERTICES      MODE        STATUS  TOTAL  COMPLETED  RUNNING  PENDING  FAILED  KILLED  
+    ----------------------------------------------------------------------------------------------
+    Map 3 .......... container     SUCCEEDED      1          1        0        0       0       0  
+    Map 11 ......... container     SUCCEEDED      1          1        0        0       0       0  
+    Map 6 .......... container     SUCCEEDED      1          1        0        0       0       0  
+    Reducer 7 ...... container     SUCCEEDED      4          4        0        0       0       0  
+    Reducer 8 ...... container     SUCCEEDED      1          1        0        0       0       0  
+    Reducer 9 ...... container     SUCCEEDED      1          1        0        0       0       0  
+    Reducer 10 ..... container     SUCCEEDED      1          1        0        0       0       0  
+    Map 4 .......... container     SUCCEEDED      1          1        0        0       0       0  
+    Reducer 5 ...... container     SUCCEEDED      1          1        0        0       0       0  
+    Map 1 .......... container     SUCCEEDED      1          1        0        0       0       0  
+    Reducer 2 ...... container     SUCCEEDED      6          6        0        0       0       0  
+    ----------------------------------------------------------------------------------------------
+    VERTICES: 11/11  [==========================>>] 100%  ELAPSED TIME: 17.41 s    
+    ----------------------------------------------------------------------------------------------
+    OK
+    Big Lebowski, The (1998)	3.7383773928896993
+    Rear Window (1954)	4.476190476190476
+    Star Wars: Episode IV - A New Hope (1977)	4.453694416583082
+    Sound of Music, The (1965)	3.931972789115646
+    Waiting for Guffman (1996)	4.147186147186147
+    Badlands (1973)	4.078838174273859
+    House of Yes, The (1997)	3.4742268041237114
+    Fast, Cheap & Out of Control (1997)	3.8518518518518516
+    Roger & Me (1989)	4.0739348370927315
+    City of Lost Children, The (1995)	4.062034739454094
+    Time taken: 20.262 seconds, Fetched: 10 row(s)
+
 
 
